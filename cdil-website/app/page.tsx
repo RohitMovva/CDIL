@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Button from "./ui/button";
-
+import Button from "../components/button";
+import Carousel from "@/components/carousel";
 
 export default function Page() {
   return (
@@ -15,13 +15,23 @@ export default function Page() {
             completely for free.
           </h2>
         </div>
-        <Image
-          src="/placeholder-parrot-2.webp"
-          width={650}
-          height={650}
-          alt="Placeholder Parrot"
-          className="rounded-2xl"
-        />
+        {/* <div className="grid place-items-end w-full h-auto object-contain max-w-full">
+          <Image
+            src="/placeholder-parrot-2.webp"
+            width={650}
+            height={650}
+            alt="Placeholder Parrot"
+            className="rounded-2xl"
+          />
+        </div> */}
+        <div className="grid relative place-items-end w-full h-120 max-w-full">
+          <Image
+            src="/placeholder-parrot-2.webp"
+            fill
+            alt="Placeholder Parrot"
+            className="rounded-2xl object-cover"
+          />
+        </div>
       </div>
       <div className="grid gap-10 place-content-center place-items-center">
         <h1 className="text-5xl">Our work matters</h1>
@@ -35,13 +45,14 @@ export default function Page() {
         </div>
       </div>
       <div className="grid grid-cols-2 place-items-center gap-20">
-        <Image
-          src="/placeholder-parrot-2.webp"
-          width={650}
-          height={650}
-          alt="Placeholder Parrot"
-          className="rounded-2xl"
-        />
+        <Carousel
+          data={[
+            { image: "/LafayettePublicLibrary.jpg", alt: "alternate" },
+            { image: "/SisterCarmen.jpg", alt: "hello" },
+            { image: "/TheArc.webp", alt: "vertical" },
+            { image: "/WanekaPark.png", alt: "vertical" },
+          ]}
+        ></Carousel>
         <div className="grid gap-10">
           <h1 className="text-5xl">Meet our partners</h1>
           <h2 className="text-xl">
@@ -61,13 +72,14 @@ export default function Page() {
             <Button text="Donate Now"></Button>
           </div>
         </div>
-        <Image
-          src="/placeholder-parrot-2.webp"
-          width={650}
-          height={650}
-          alt="Placeholder Parrot"
-          className="rounded-2xl"
-        />
+        <div className="grid relative place-items-end w-full h-120 max-w-full">
+          <Image
+            src="/placeholder-parrot-2.webp"
+            fill
+            alt="Placeholder Parrot"
+            className="rounded-2xl object-cover"
+          />
+        </div>
       </div>
     </>
   );

@@ -38,7 +38,7 @@ export default function Button({
     <button
       type={type}
       onClick={onClick}
-      className={`${bgColor} ${textColor} ${border} ${borderColor} hover:cursor-pointer line-clamp-1 flex h-12 transform items-center justify-center gap-x-2 rounded-xl px-5 ${
+      className={`${bgColor} ${textColor} ${border} ${borderColor} text-xl hover:cursor-pointer line-clamp-1 flex h-12 transform items-center justify-center gap-x-2 rounded-xl px-5 ${
         !noAnimation
           ? "transition-transform duration-300 hover:-translate-y-1"
           : ""

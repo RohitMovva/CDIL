@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import Image from "next/image";
-import Button from "./ui/button";
+import Button from "../components/button";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <body className="antialiased">
-        <div className="mx-30 grid gap-30 mb-30">
+        <div className="sm:mx-5 md:mx-30 lg:mx-40 grid gap-30 mb-30">
           <nav className="flex items-center text-xl justify-between py-4">
             <ul className="flex items-center text-black gap-10">
               <li>
