@@ -40,31 +40,32 @@ export default function EventsPage() {
         // Only include events that haven't passed yet
         if (secondSunday >= today) {
           events.push({
-            id: `${targetYear}-${normalizedMonth}-2nd`,
-            date: secondSunday,
-            title: "Digital Literacy Workshop",
-            location: "Lafayette Public Library",
-            address: "775 W Baseline Rd, Lafayette, CO 80026",
-            room: "Community Room A",
-            startTime: "2:00 PM",
-            endTime: "4:00 PM",
+            id: `${targetYear}-${normalizedMonth}-3rd`,
+            date: thirdSunday,
+            title: "Lafayette Library Workshop",
+            location: "Waneka Park Assisted Living",
+            address: "225 Waneka Pkwy, Lafayette, CO 80026",
+            room: "Meeting Room B",
+            startTime: "1:00 PM",
+            endTime: "3:00 PM",
             description:
-              "Learn essential computer skills in a supportive environment. Perfect for beginners!",
+              "Solve any tech problems you may have! Answer questions about smartphones, tablets, and computers.",
           });
         }
 
         if (thirdSunday >= today) {
+
           events.push({
-            id: `${targetYear}-${normalizedMonth}-3rd`,
-            date: thirdSunday,
-            title: "Tech Help & Q&A Session",
-            location: "Sister Carmen Community Center",
-            address: "2825 Lafayette Dr, Boulder, CO 80305",
-            room: "Meeting Room B",
-            startTime: "1:30 PM",
-            endTime: "3:30 PM",
+            id: `${targetYear}-${normalizedMonth}-2nd`,
+            date: secondSunday,
+            title: "Waneka Park Workshop",
+            location: "Lafayette Public Library",
+            address: "775 W Baseline Rd, Lafayette, CO 80026",
+            room: "Learning ",
+            startTime: "1:00 PM",
+            endTime: "3:00 PM",
             description:
-              "Bring your questions! Our volunteers will help with smartphones, tablets, and computers.",
+              "Solve any tech problems you may have! Answer questions about smartphones, tablets, and computers.",
           });
         }
       }
@@ -120,12 +121,12 @@ export default function EventsPage() {
           <h2 className="text-xl">
             Every second and third Sunday of the month, we host hands-on digital
             literacy workshops in partnership with local community
-            organizations.
+            organizations. 
           </h2>
         </div>
         <div className="grid relative place-items-end w-full h-120 max-w-full">
           <Image
-            src="/placeholder-parrot-2.webp"
+            src="/volunteering/collin-arc.jpg"
             fill
             alt="Workshop in session"
             className="rounded-2xl object-cover"
@@ -142,24 +143,21 @@ export default function EventsPage() {
         </h2>
         <div className="grid grid-cols-3 gap-10 max-w-6xl">
           <div className="grid gap-5 p-8 bg-gray-50 rounded-2xl">
-            <h3 className="text-2xl font-semibold">Small Groups</h3>
+            <h3 className="text-2xl font-semibold">One on One</h3>
             <p className="text-lg">
-              We keep our workshops small to ensure everyone gets personalized
-              attention and can learn at their own pace.
+              We offer one on one help to ensure you get the best support possible.
             </p>
           </div>
           <div className="grid gap-5 p-8 bg-gray-50 rounded-2xl">
             <h3 className="text-2xl font-semibold">Bring Your Device</h3>
             <p className="text-lg">
-              Bring your own smartphone, tablet, or laptop to practice on the
-              device you'll actually use at home.
+              Bring your own device, whether it's a smartphone, tablet, or laptop.
             </p>
           </div>
           <div className="grid gap-5 p-8 bg-gray-50 rounded-2xl">
-            <h3 className="text-2xl font-semibold">Patient Instructors</h3>
+            <h3 className="text-2xl font-semibold">All are welcome</h3>
             <p className="text-lg">
-              Our student volunteers are trained to be patient teachers who
-              understand that everyone learns differently.
+              No matter your experience, we welcome everyone to join us and learn.
             </p>
           </div>
         </div>
@@ -218,7 +216,7 @@ export default function EventsPage() {
               <div className="grid gap-2">
                 <h4 className="font-semibold text-lg">{event.location}</h4>
                 <p className="text-sm text-gray-600">{event.address}</p>
-                <p className="text-sm text-gray-600">{event.room}</p>
+                <p className="text-sm text-gray-600">{""}</p> {/* Room is not used in the UI */}
                 <div className="mt-4">
                   <Button
                     text="Get directions"
@@ -270,24 +268,11 @@ export default function EventsPage() {
         </div>
         <div className="grid relative place-items-end w-full h-120 max-w-full">
           <Image
-            src="/placeholder-parrot-2.webp"
+            src="/volunteering/rohit-pierce-waneka.jpg"
             fill
             alt="People learning together"
             className="rounded-2xl object-cover"
           />
-        </div>
-      </div>
-
-      {/* Call to Action */}
-      <div className="grid gap-10 place-content-center place-items-center text-center bg-blue-50 p-16 rounded-3xl">
-        <h1 className="text-5xl">Can't make it to a workshop?</h1>
-        <h2 className="text-xl max-w-3xl">
-          We also offer one-on-one tutoring sessions and can work with
-          organizations to bring workshops directly to your community.
-        </h2>
-        <div className="flex gap-10">
-          <Button text="Request private tutoring" href="/contact" />
-          <Button text="Partner with us" href="/partners" />
         </div>
       </div>
     </>

@@ -14,7 +14,7 @@ export default function AboutPage() {
         </div>
         <div className="grid relative place-items-end w-full h-120 max-w-full">
           <Image
-            src="/placeholder-parrot-2.webp"
+            src="/volunteering/emory-waneka.jpg"
             fill
             alt="Students teaching technology"
             className="rounded-2xl object-cover"
@@ -60,7 +60,7 @@ export default function AboutPage() {
       <div className="grid grid-cols-2 place-items-center gap-20">
         <div className="grid relative place-items-end w-full h-120 max-w-full">
           <Image
-            src="/placeholder-parrot-2.webp"
+            src="/volunteering/rohit-lafayette.jpg"
             fill
             alt="Community workshop in action"
             className="rounded-2xl object-cover"
@@ -76,12 +76,12 @@ export default function AboutPage() {
           </h2>
           <div className="grid grid-cols-2 gap-8">
             <div>
-              <div className="text-4xl font-bold text-blue-600">500+</div>
+              <div className="text-4xl font-bold text-blue-600">200+</div>
               <div className="text-lg">People taught</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-blue-600">25+</div>
-              <div className="text-lg">Partner organizations</div>
+              <div className="text-4xl font-bold text-blue-600">70+</div>
+              <div className="text-lg">Workshops held</div>
             </div>
           </div>
         </div>
@@ -123,7 +123,7 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 place-items-center gap-20">
+      <div className="grid grid-cols-2 place-items-center gap-20" id="volunteer-section">
         <div className="grid gap-10">
           <h1 className="text-5xl">Meet our team</h1>
           <h2 className="text-xl">
@@ -136,13 +136,13 @@ export default function AboutPage() {
             dedicated students who want to make a difference in their
             communities.
           </p>
-          <div>
-            <Button text="Join our team" href="/volunteer" />
-          </div>
+          <p className="text-lg text-gray-600">
+            To join our team, please email us at{""}
+          </p>
         </div>
         <div className="grid relative place-items-end w-full h-120 max-w-full">
           <Image
-            src="/placeholder-parrot-2.webp"
+            src="/volunteering/full-team.jpg"
             fill
             alt="Team of student volunteers"
             className="rounded-2xl object-cover"
@@ -159,8 +159,7 @@ export default function AboutPage() {
         </h2>
         <div className="flex gap-10">
           <Button text="Attend a workshop" href="/events" />
-          <Button text="Become a volunteer" href="/volunteer" />
-          <Button text="Support our work" href="/donate" />
+          <Button text="Become a volunteer" href="#volunteer-section" />
         </div>
       </div>
     </>
